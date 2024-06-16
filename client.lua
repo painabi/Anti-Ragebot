@@ -17,7 +17,7 @@ AddEventHandler('CEventGunShot', function(witnesses, ped)
             playershootcount = playershootcount - 1
         end)
         if playershootcount > 500 and not detected then
-            TriggerServerEvent('your_server_name:antieventlogger5455455454', playershootcount)
+            DropPlayer('Player has used RageBot Count:'..playershootcount..'')
             playerhasused = true
         end
     end
