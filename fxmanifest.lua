@@ -4,5 +4,6 @@ lua54 'yes'
 author '@painabixyz'
 description 'FiveM Anti RageBot Script for Cheats Like Nexus...'
 client_scripts {
-    "client.lua"
+    "client.lua",
+    "config.lua"
 }
