@@ -1,7 +1,7 @@
 local whitelistedweapons = Config.WhitelistedWeapons[selectedWeapon]
 local playershootcount = 0
 local playerhasused = false
-local chekcount = 1000
+local chekcount = Config.CheckTime
 
 AddEventHandler('CEventGunShot', function(witnesses, ped)
     local playerPed = PlayerPedId()
