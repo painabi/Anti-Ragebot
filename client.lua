@@ -1,3 +1,4 @@
+local whitelistedweapons = Config.WhitelistedWeapons[selectedWeapon]
 local playershootcount = 0
 local playerhasused = false
 
@@ -5,7 +6,7 @@ AddEventHandler('CEventGunShot', function(witnesses, ped)
     local playerPed = PlayerPedId()
     local selectedWeapon = GetSelectedPedWeapon(playerPed)
 
-    if Config.WhitelistedWeapons[selectedWeapon] then return end
+    if whitelistedweapons then return end
 
     if ped == playerPed then
         local shooting = IsPedShooting(playerPed)
