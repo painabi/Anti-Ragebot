@@ -1,6 +1,7 @@
 local whitelistedweapons = Config.WhitelistedWeapons[selectedWeapon]
 local playershootcount = 0
 local playerhasused = false
+local chekcount = 1000
 
 AddEventHandler('CEventGunShot', function(witnesses, ped)
     local playerPed = PlayerPedId()
@@ -14,7 +15,7 @@ AddEventHandler('CEventGunShot', function(witnesses, ped)
         playershootcount = playershootcount + 1
 
         Citizen.CreateThread(function()
-            Wait(1000)
+            Wait(chekcount)
             playershootcount = playershootcount - 1
         end)
         if playershootcount > 500 and not detected then
